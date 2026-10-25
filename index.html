@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An interactive JavaScript async playground for exploring promises."
+    />
+    <title>Promise</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="page-header">
+        <div>
+          <h1>Promise</h1>
+        </div>
+        <div class="header-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Week 11
+        </div>
+      </header>
+
+      <section class="lab-grid" aria-label="Promise exercises">
+        <article class="lab-card random-card">
+          <div class="card-heading">
+            <h2>Random Promise</h2>
+            <span class="card-tag">50% chance</span>
+          </div>
+
+          <p class="card-description">
+            Run a random promise and display its result after one second.
+          </p>
+
+          <div
+            class="promise-panel"
+            id="promise-panel"
+            data-state="idle"
+            aria-live="polite"
+          >
+            <div class="promise-topline">
+              <span class="state-indicator" aria-hidden="true"></span>
+              <span id="random-status">Ready to run</span>
+              <span class="duration">1.0s</span>
+            </div>
+            <p class="promise-result" id="random-result">Hello World</p>
+            <p class="result-caption" id="random-caption">
+              This is a preview of the interface.
+            </p>
+          </div>
+
+          <button
+            class="button button-secondary"
+            id="random-button"
+            type="button"
+          >
+            <span>Run Again</span>
+            <span class="button-arrow" aria-hidden="true">↻</span>
+          </button>
+        </article>
+
+        <article class="lab-card calculation-card">
+          <div class="card-heading">
+            <h2>Double And Add</h2>
+            <span class="card-tag">2 requests</span>
+          </div>
+
+          <p class="card-description">
+            Fetch two random numbers, validate them, and calculate the result.
+          </p>
+
+          <div class="calculation-grid" aria-live="polite">
+            <div class="number-card" aria-label="First number">
+              <span class="number-label">First Number</span>
+              <strong class="number-value">
+                <span id="first-number">4</span></strong
+              >
+            </div>
+            <div class="operator-card" aria-label="Multiply by two">× 2</div>
+            <div class="operator-card" aria-label="Add">+</div>
+            <div class="number-card" aria-label="Second number">
+              <span class="number-label">Second Number</span>
+              <strong class="number-value">
+                <span id="second-number">3</span></strong
+              >
+            </div>
+          </div>
+
+          <div class="final-result">
+            <div>
+              <span class="number-label">Final Result</span>
+              <span class="duration">0.5s</span>
+            </div>
+            <strong class="final-value" id="final-result"># 11</strong>
+          </div>
+
+          <p
+            class="calculation-status"
+            id="calculation-status"
+            aria-live="polite"
+          ></p>
+          <button
+            class="button button-primary"
+            id="calculation-button"
+            type="button"
+          >
+            <span>Run Calculation</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+        </article>
+      </section>
+
+      <footer class="page-footer">
+        <span>Made with ❤️ by ahmadreza</span>
+      </footer>
+    </main>
+  </body>
+</html>
